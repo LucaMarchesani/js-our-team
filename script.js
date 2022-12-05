@@ -16,6 +16,8 @@
 // Ragioniamo come sempre a step. Prima la logica in italiano e poi traduciamo in codice.
 // E ricordiamoci che console.log() è nostro amico!
 
+
+// creo un arrey di oggetti 
 const team = [
     {
         name : 'Wayne Barret',
@@ -49,8 +51,45 @@ const team = [
     }
 ];
 
-for (key in team){
+// recupero il main e inserisco gli elementi di cui ho bisogno 
+const main = document.querySelector('main');
+const h2Element = document.createElement('h2');
+const pElement = document.createElement('p');
+const imgElement = document.createElement('span');//da cambiare con un tag img se arrivo al bonus..
+
+// inserisco gli elementi nel DOM 
+main.appendChild(h2Element);
+main.appendChild(pElement);
+main.appendChild(imgElement);
+
+// stampo in console i membri del team con le relative informazi
+for (let key in team){
     console.log(team[key]);
+
 }
+
+// creo un ciclo per inserire nel DOM le informazioni dei membri
+for (let i  = 0; i < team.length; i++){
+    h2Element.append(team[i].name);
+    pElement.append(team[i].position);
+    imgElement.append(team[i].photo);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
